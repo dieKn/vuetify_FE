@@ -1,12 +1,13 @@
 {
   "name": "webapp",
   "version": "1.0.0",
-  "description": "My sweet Nuxt.js project",
-  "author": "dieKn",
+  "description": "My impressive Nuxt.js project",
+  "author": "DieKn",
   "private": true,
   "config": {
     "nuxt": {
-      "host": "192.168.33.17"
+      "host": "192.168.33.17",
+      "port": "3000"
     }
   },
   "scripts": {
