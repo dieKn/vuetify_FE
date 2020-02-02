@@ -10,7 +10,7 @@
             <v-icon>mdi-home</v-icon>
           </v-list-item-action>
           <v-list-item-content>
-            <v-list-item-title>Home</v-list-item-title>
+            <v-list-item-title><v-btn to="/">Home</v-btn></v-list-item-title>
           </v-list-item-content>
         </v-list-item>
         <v-list-item link>
@@ -45,13 +45,7 @@
           <v-col class="text-center">
             <v-tooltip left>
               <template v-slot:activator="{ on }">
-                <v-btn
-                  :href="source"
-                  icon
-                  large
-                  target="_blank"
-                  v-on="on"
-                >
+				<v-btn to="/test" nuxt>
                   <v-icon large>mdi-code-tags</v-icon>
                 </v-btn>
               </template>
@@ -72,6 +66,7 @@
               </template>
               <span>Codepen</span>
             </v-tooltip>
+			<nuxt />
           </v-col>
         </v-row>
       </v-container>
