@@ -26,11 +26,11 @@
 
     <v-app-bar
       app
-      color="#0099ff"
+      color="indigo"
       dark
     >
       <v-app-bar-nav-icon @click.stop="drawer = !drawer" />
-      <v-toolbar-title>Knowledge Share</v-toolbar-title>
+      <v-toolbar-title>Application</v-toolbar-title>
     </v-app-bar>
 
     <v-content>
@@ -38,11 +38,41 @@
         class="fill-height"
         fluid
       >
-		<nuxt />
+        <v-row
+          align="center"
+          justify="center"
+        >
+          <v-col class="text-center">
+            <v-tooltip left>
+              <template v-slot:activator="{ on }">
+				<v-btn to="/test" nuxt>
+                  <v-icon large>mdi-code-tags</v-icon>
+                </v-btn>
+              </template>
+              <span>Source</span>
+            </v-tooltip>
+
+            <v-tooltip right>
+              <template v-slot:activator="{ on }">
+                <v-btn
+                  icon
+                  large
+                  href="https://codepen.io/johnjleider/pen/zgxeLQ"
+                  target="_blank"
+                  v-on="on"
+                >
+                  <v-icon large>mdi-codepen</v-icon>
+                </v-btn>
+              </template>
+              <span>Codepen</span>
+            </v-tooltip>
+			<nuxt />
+          </v-col>
+        </v-row>
       </v-container>
     </v-content>
     <v-footer
-      color="#0099ff"
+      color="indigo"
       app
     >
       <span class="white--text">&copy; 2019</span>
